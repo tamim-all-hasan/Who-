@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinite Observer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Boot Screen -->
+<div id="bootScreen">
+  <h1>INITIALIZING SYSTEM...</h1>
+  <button onclick="startGame()">ENTER</button>
+</div>
+
+<!-- Narrator Selection -->
+<div id="narratorSelect" class="hidden">
+  <h2>Select Intelligence Type</h2>
+  <button onclick="selectNarrator('cold')">Cold Manipulative Entity</button>
+  <button onclick="selectNarrator('curious')">Curious Evolving Intelligence</button>
+</div>
+
+<!-- Main Game UI -->
+<div id="gameUI" class="hidden">
+  <div id="stats">
+    <span>Score: <span id="score">0</span></span>
+    <span>Entropy: <span id="entropy">0</span></span>
+    <span>Evolution: <span id="evolution">0</span></span>
+  </div>
+
+  <div id="narratorText"></div>
+  <div id="puzzleArea"></div>
+  <div id="options"></div>
+</div>
+
+<!-- Ending Screen -->
+<div id="endingScreen" class="hidden">
+  <h2 id="endingTitle"></h2>
+  <p id="endingText"></p>
+  <button onclick="restart()">Play Again</button>
+</div>
+
+<script src="utils.js"></script>
+<script src="narrator.js"></script>
+<script src="puzzles.js"></script>
+<script src="engine.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
